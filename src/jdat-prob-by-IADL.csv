@@ -1,0 +1,51 @@
+button1,my_slider,value
+Standing balance,baseline,0.3783783783783784
+Bowel,baseline,0.45454545454545453
+Housecleaning and home maintenance,baseline,0.27848101265822783
+Managing tasks associated with laundry,baseline,0.4583333333333333
+Uses public transportation as usual,baseline,0.27586206896551724
+Shopping for items required for daily life,baseline,0.30434782608695654
+Bladder,baseline,0.24
+Meal Preparation,baseline,0.25
+Managing Finance,baseline,0.2222222222222222
+Managing medications,baseline,0.35
+Standing balance,Drop 25%,0.33513513513513515
+Bowel,Drop 25%,0.38181818181818183
+Housecleaning and home maintenance,Drop 25%,0.24556962025316456
+Managing tasks associated with laundry,Drop 25%,0.39166666666666666
+Uses public transportation as usual,Drop 25%,0.24482758620689657
+Shopping for items required for daily life,Drop 25%,0.28260869565217395
+Bladder,Drop 25%,0.228
+Meal Preparation,Drop 25%,0.2375
+Managing Finance,Drop 25%,0.21666666666666665
+Managing medications,Drop 25%,0.33499999999999996
+Standing balance,Drop 50%,0.3027027027027027
+Bowel,Drop 50%,0.3181818181818182
+Housecleaning and home maintenance,Drop 50%,0.21139240506329116
+Managing tasks associated with laundry,Drop 50%,0.3375
+Uses public transportation as usual,Drop 50%,0.20689655172413793
+Shopping for items required for daily life,Drop 50%,0.26956521739130435
+Bladder,Drop 50%,0.212
+Meal Preparation,Drop 50%,0.225
+Managing Finance,Drop 50%,0.18888888888888888
+Managing medications,Drop 50%,0.3
+Standing balance,Drop 75%,0.2783783783783784
+Bowel,Drop 75%,0.15454545454545454
+Housecleaning and home maintenance,Drop 75%,0.17721518987341772
+Managing tasks associated with laundry,Drop 75%,0.3125
+Uses public transportation as usual,Drop 75%,0.1896551724137931
+Shopping for items required for daily life,Drop 75%,0.26521739130434785
+Bladder,Drop 75%,0.192
+Meal Preparation,Drop 75%,0.225
+Managing Finance,Drop 75%,0.17222222222222222
+Managing medications,Drop 75%,0.29
+Standing balance,Drop 100%,0.24324324324324326
+Bowel,Drop 100%,0.09090909090909091
+Housecleaning and home maintenance,Drop 100%,0.1518987341772152
+Managing tasks associated with laundry,Drop 100%,0.25
+Uses public transportation as usual,Drop 100%,0.1724137931034483
+Shopping for items required for daily life,Drop 100%,0.2608695652173913
+Bladder,Drop 100%,0.16
+Meal Preparation,Drop 100%,0.20833333333333334
+Managing Finance,Drop 100%,0.16666666666666666
+Managing medications,Drop 100%,0.25

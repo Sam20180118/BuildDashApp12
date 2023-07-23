@@ -1,0 +1,18 @@
+feature,shap_value
+age,0.098930441556018
+sex,0.024758881980534136
+COPD,0.013285958836942656
+Heart Disease,0.03810008451966135
+Stroke,0.02230784667819141
+Walking Aid,0.029896323016541576
+Standing balance,0.06941471331983722
+social service usage,0.023787228723882774
+Bowel,0.017002460296893115
+Housecleaning and home maintenance,0.06620623979381697
+Managing tasks associated with laundry,0.13642391833400347
+Uses public transportation as usual,0.05275909673615573
+Shopping for items required for daily life,0.040842856642648515
+Bladder,0.011588840794310464
+Meal Preparation,0.03294979389282381
+Managing Finance,0.018630808049470413
+Managing medications,0.021340203010994374

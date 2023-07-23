@@ -53,7 +53,7 @@ def control1(button1, my_slider):
         y=0.35,
         text='Expected risk prevalence <br> if interventions effective',
         font=dict(
-            size=20,
+            size=12,
             # color = 'darkred'
         ), showarrow=True)
 
@@ -61,7 +61,7 @@ def control1(button1, my_slider):
         legend=dict(orientation="h", yanchor="bottom", y=0, xanchor="center", x=0.5),
         margin=dict(b=0, t=0, l=0, r=0),
         template='ggplot2',
-        height=325
+        height=200
     )
     return avg_risk_plt
 
@@ -92,14 +92,17 @@ app.layout = html.Div([
                                             'text-color': 'white',
                                             # 'textAlign': 'center',
                                             'margin': '5px',
-                                            'width': '250',
+                                            # 'width': '100%',
+                                            # 'height': '600px',
+                                            'height': '10px', 'width': '400px',
                                             'font-size': '100%'},
                                      className="dropdown open"), ]),
-                    width={"size": 5}),
+                    width={"size": 4}
+                ),
                 dbc.Col([
-                    html.Div(['Decision Direction(決策方向/風險條件)'],
+                    html.Div(['Decision Direction'],
                              style={
-                                 'font-size': 30,
+                                 'font-size': 25,
                                  'margin-right': '2px',
                                  'margin-left': '2px'
                              }), ]),
@@ -108,35 +111,35 @@ app.layout = html.Div([
             dbc.Row([
                 dbc.Col([html.Div("Current risk prevalence of Dependent group",
                                   style={'font-weight': 'bold',
-                                         'font-size': 30,
-                                         'marginBottom': '10px',
-                                         'marginTop': '10px',
+                                         'font-size': 15,
+                                         # 'marginBottom': '0px',
+                                         # 'marginTop': '10px',
                                          # 'margin': '1px',
                                          }),
                          html.Div(
                              id='avg_risk',
                              style={
                                  # 'font-weight': 'bold',
-                                 'font-size': 100,
+                                 'font-size': 60,
                                  'color': 'blue',
                              }),
                          ], width={"size": 4}),
                 dbc.Col([html.Div("VS",
                                   style={'font-weight': 'bold',
-                                         'padding': '100px 50px',
-                                         'font-size': 100})], width={"size": 3}),
+                                         'padding': '45px 0px',
+                                         'font-size': 60})], width={"size": 2}),
 
                 dbc.Col([html.Div(["Current risk prevalence of Full sample"],
                                   style={'font-weight': 'bold',
-                                         'font-size': 30,
-                                         'marginBottom': '10px',
-                                         'marginTop': '10px',
+                                         'font-size': 15,
+                                         # 'marginBottom': '0px',
+                                         # 'marginTop': '10px',
                                          # 'margin': '1px',
                                          }),
                          html.Div('15.8%',
                                   style={
                                       # 'font-weight': 'bold',
-                                      'font-size': 100,
+                                      'font-size': 60,
                                       'color': 'green', }),
                          ], width={"size": 4}),
             ], style={"height": "25%"}, className="g-0"),
@@ -146,42 +149,43 @@ app.layout = html.Div([
                         dbc.CardBody([
                             dcc.Graph(id='fig_guage',
                                       figure=control1(button1, my_slider),
-                                      className=' mb-1'), ]),
+                                      className=' mb-1',),
+                                    ]),
                         dbc.CardFooter([dcc.Slider(min=1, max=5, step=None,
                                                    id='my_slider_num',
                                                    marks={
-                                                       1: {"label": "Baseline", 'style': {'transform': 'scale(1.5)'}},
-                                                       2: {"label": "25%", 'style': {'transform': 'scale(1.5)'}},
-                                                       3: {"label": "50%", 'style': {'transform': 'scale(1.5)'}},
-                                                       4: {"label": "75%", 'style': {'transform': 'scale(1.5)'}},
-                                                       5: {"label": "100%", 'style': {'transform': 'scale(1.5)'}}},
+                                                       1: {"label": "Baseline", 'style': {'transform': 'scale(1.2)'}},
+                                                       2: {"label": "25%", 'style': {'transform': 'scale(1.2)'}},
+                                                       3: {"label": "50%", 'style': {'transform': 'scale(1.2)'}},
+                                                       4: {"label": "75%", 'style': {'transform': 'scale(1.2)'}},
+                                                       5: {"label": "100%", 'style': {'transform': 'scale(1.2)'}}},
                                                    value=1,
                                                    ),
                                         ]),
-                    ], style={"width": "60rem",
+                    ], style={"width": "35rem",
                               # 'height':'50vh'
                               }),
                 ])
             ]),
-            dbc.Row([html.Div(['Decision variable(決策變量): '],
+            dbc.Row([html.Div(['Decision variable'],
                               style={
-                                  'font-size': 30,
+                                  'font-size': 25,
                               }),
-                     html.Div(['selected risk condition of',
-                               html.Br(),
-                               ' Baseline: 0% of individuals in the dependent group improve ',
-                               html.Br(),
-                               ' 25%: 25% of individuals in the dependent group improve ',
-                               html.Br(),
-                               ' 50%: 50% of individuals in the dependent group improve ',
-                               html.Br(),
-                               ' 75%: 75% of individuals in the dependent group improve ',
-                               html.Br(),
-                               ' 100%: 100% of individuals in the dependent group improve ',
-                               ],
-                              style={
-                                  'font-size': 15,
-                              }),
+                     # html.Div(['selected risk condition of',
+                     #           html.Br(),
+                     #           ' Baseline: 0% of individuals in the dependent group improve ',
+                     #           html.Br(),
+                     #           ' 25%: 25% of individuals in the dependent group improve ',
+                     #           html.Br(),
+                     #           ' 50%: 50% of individuals in the dependent group improve ',
+                     #           html.Br(),
+                     #           ' 75%: 75% of individuals in the dependent group improve ',
+                     #           html.Br(),
+                     #           ' 100%: 100% of individuals in the dependent group improve ',
+                     #           ],
+                     #          style={
+                     #              'font-size': 15,
+                     #          }),
                      ])
         ]),
         dbc.Col([
@@ -259,12 +263,12 @@ def gen_shap_plot(button1):
     fig.update_layout(
         xaxis_title="mean(|SHAP value|)(average impact on model output magnitude)",
         autosize=False,
-        width=990,
-        height=800,
+        width=630,
+        height=440,
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
         font=dict(
-            size=17,
+            size=11,
         ),
         yaxis=dict(
             showgrid=False,

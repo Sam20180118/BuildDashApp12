@@ -79,7 +79,7 @@ app.layout = html.Div([
                       style={'marginLeft': 20, 'color': 'white'})],
              style={'borderBottom': 'thin black solid',
                     'backgroundColor': '#24a0ed',
-                    'padding': '10px 5px'}),
+                    'padding': '2px 5px'}),
     dbc.Row([
         dbc.Col([
             dbc.Row([

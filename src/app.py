@@ -274,6 +274,7 @@ def gen_shap_plot(button1):
     df4plot1 = df4plot.sort_values('shap_value')
     fig = px.bar(df4plot1, x="shap_value", y="feature")
 
+    fig.update_traces(marker_color='green')
     fig.update_layout(
         xaxis_title="mean(|SHAP value|)(average impact on model output magnitude)",
         autosize=False,

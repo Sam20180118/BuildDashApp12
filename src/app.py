@@ -67,7 +67,10 @@ def control1(button1, my_slider):
 
 
 # Start Dashboard
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
+                meta_tags=[{'name': 'viewport',
+                            'content': 'width=device-width, initial-scale=0.65, maximum-scale=0.65, minimum=scale=0.65,'}],
+                )
 server = app.server
 
 # Layout section
@@ -80,6 +83,15 @@ app.layout = html.Div([
     dbc.Row([
         dbc.Col([
             dbc.Row([
+                dbc.Col([
+                    html.Div(['Decision Direction'],
+                             style={
+                                 'font-size': 16,
+                                # 'font-weight': 'bold',
+                                 # 'margin-right': '2px',
+                                 # 'margin-left': '2px',
+                                 # 'padding': '10px 400px'
+                             }), ], width={"size": 3}),
                 dbc.Col(
                     html.Div([
                         dcc.Dropdown(id='dp7',
@@ -90,24 +102,22 @@ app.layout = html.Div([
                                             'border-color': '#b3dad7',
                                             'background-color': 'white',
                                             'text-color': 'white',
+                                            'optionHeight': '100',
                                             # 'textAlign': 'center',
-                                            'margin': '5px',
+                                            # 'margin': '5px',
                                             # 'width': '100%',
                                             # 'height': '600px',
-                                            'height': '10px', 'width': '400px',
-                                            'font-size': '100%'},
+                                            'width': '400px',
+                                            # 'width': '160%',
+                                            # 'font-size': '100%'
+                                            },
                                      className="dropdown open"), ]),
                     width={"size": 4}
                 ),
-                dbc.Col([
-                    html.Div(['Decision Direction'],
-                             style={
-                                 'font-size': 25,
-                                 'margin-right': '2px',
-                                 'margin-left': '2px'
-                             }), ]),
 
-            ], className="g-0"),
+            ],
+                className="g-0"
+            ),
             dbc.Row([
                 dbc.Col([html.Div("Current risk prevalence of Dependent group",
                                   style={'font-weight': 'bold',
